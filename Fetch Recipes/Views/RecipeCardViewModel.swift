@@ -16,6 +16,8 @@ extension RecipeCardView {
         var youtubeLink: URL? { recipe.youtubeURL }
         var placeholderSystemImageName: String { "photo" }
         var errorSystemImageName: String { "photo.badge.exclamationmark" }
+        var shareIconSystemImageName: String { "square.and.arrow.up" }
+        var videoIconSystemImageName: String { "video" }
         
         private let recipe: Recipe
         

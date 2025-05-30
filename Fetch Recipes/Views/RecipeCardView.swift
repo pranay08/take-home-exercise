@@ -25,7 +25,7 @@ struct RecipeCardView: View {
                 HStack(alignment: .bottom) {
                     if let url = viewModel.shareLink {
                         ShareLink(item: url) {
-                            Image(systemName: "square.and.arrow.up")
+                            Image(systemName: viewModel.shareIconSystemImageName)
                                 .font(.subheadline)
                         }
                     }
@@ -33,7 +33,7 @@ struct RecipeCardView: View {
                         Button {
                             openURL(url)
                         } label: {
-                            Image(systemName: "video")
+                            Image(systemName: viewModel.videoIconSystemImageName)
                                 .font(.subheadline)
                         }
                     }

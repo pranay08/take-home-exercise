@@ -9,6 +9,14 @@ import Foundation
 
 extension RecipesView {
     final class ViewModel: ObservableObject {
+        var refreshIconSystemName: String { "arrow.clockwise" }
+        var navigationTitle: String { "Recipes" }
+        var loadingMessage: String { "Loading recipes..." }
+        var errorImageResource: ImageResource { .deadFood }
+        var errorViewMessage: String { "Failed to load recipes" }
+        var emptyImageResource: ImageResource { .emptyBasket }
+        var emptyViewMessage: String { "No recipes found" }
+        
         @Published private(set) var state: ViewState = .loading
         @Published private(set) var recipes: [Recipe] = []
         

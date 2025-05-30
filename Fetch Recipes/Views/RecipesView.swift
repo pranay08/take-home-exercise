@@ -22,10 +22,10 @@ struct RecipesView: View {
                         await viewModel.loadRecipes()
                     }
                 } label: {
-                    Image(systemName: "arrow.clockwise")
+                    Image(systemName: viewModel.refreshIconSystemName)
                 }
             }
-            .navigationTitle("Recipes")
+            .navigationTitle(viewModel.navigationTitle)
             .refreshable {
                 Task {
                     await viewModel.loadRecipes()
@@ -37,7 +37,7 @@ struct RecipesView: View {
     private var contentView: some View {
         switch viewModel.state {
         case .loading:
-            ProgressView("Loading recipes...")
+            ProgressView(viewModel.loadingMessage)
                 .task {
                     await viewModel.loadRecipes()
                 }
@@ -56,15 +56,15 @@ struct RecipesView: View {
         case .error:
             ContentFillingScrollView {
                 VStack(spacing: 16) {
-                    Image(.deadFood)
-                    Text("Failed to load recipes")
+                    Image(viewModel.errorImageResource)
+                    Text(viewModel.errorViewMessage)
                 }
             }
         case .empty:
             ContentFillingScrollView {
                 VStack(spacing: 16) {
-                    Image(.emptyBasket)
-                    Text("No recipes found")
+                    Image(viewModel.emptyImageResource)
+                    Text(viewModel.emptyViewMessage)
                 }
             }
         }
