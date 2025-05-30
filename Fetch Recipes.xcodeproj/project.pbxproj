@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EBEA05CF2DEA0B4D0028F592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEA05B92DEA0B4C0028F592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBEA05C02DEA0B4C0028F592;
+			remoteInfo = "Fetch Recipes";
+		};
+		EBEA05D92DEA0B4D0028F592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEA05B92DEA0B4C0028F592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBEA05C02DEA0B4C0028F592;
+			remoteInfo = "Fetch Recipes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBEA05C12DEA0B4C0028F592 /* Fetch Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEA05CE2DEA0B4D0028F592 /* Fetch RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch RecipesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEA05D82DEA0B4D0028F592 /* Fetch RecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch RecipesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EBEA05C32DEA0B4C0028F592 /* Fetch Recipes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Fetch Recipes";
+			sourceTree = "<group>";
+		};
+		EBEA05D12DEA0B4D0028F592 /* Fetch RecipesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Fetch RecipesTests";
+			sourceTree = "<group>";
+		};
+		EBEA05DB2DEA0B4D0028F592 /* Fetch RecipesUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Fetch RecipesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBEA05BE2DEA0B4C0028F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05CB2DEA0B4D0028F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05D52DEA0B4D0028F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBEA05B82DEA0B4C0028F592 = {
+			isa = PBXGroup;
+			children = (
+				EBEA05C32DEA0B4C0028F592 /* Fetch Recipes */,
+				EBEA05D12DEA0B4D0028F592 /* Fetch RecipesTests */,
+				EBEA05DB2DEA0B4D0028F592 /* Fetch RecipesUITests */,
+				EBEA05C22DEA0B4C0028F592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBEA05C22DEA0B4C0028F592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBEA05C12DEA0B4C0028F592 /* Fetch Recipes.app */,
+				EBEA05CE2DEA0B4D0028F592 /* Fetch RecipesTests.xctest */,
+				EBEA05D82DEA0B4D0028F592 /* Fetch RecipesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBEA05C02DEA0B4C0028F592 /* Fetch Recipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEA05E22DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch Recipes" */;
+			buildPhases = (
+				EBEA05BD2DEA0B4C0028F592 /* Sources */,
+				EBEA05BE2DEA0B4C0028F592 /* Frameworks */,
+				EBEA05BF2DEA0B4C0028F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EBEA05C32DEA0B4C0028F592 /* Fetch Recipes */,
+			);
+			name = "Fetch Recipes";
+			packageProductDependencies = (
+			);
+			productName = "Fetch Recipes";
+			productReference = EBEA05C12DEA0B4C0028F592 /* Fetch Recipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBEA05CD2DEA0B4D0028F592 /* Fetch RecipesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEA05E52DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch RecipesTests" */;
+			buildPhases = (
+				EBEA05CA2DEA0B4D0028F592 /* Sources */,
+				EBEA05CB2DEA0B4D0028F592 /* Frameworks */,
+				EBEA05CC2DEA0B4D0028F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBEA05D02DEA0B4D0028F592 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EBEA05D12DEA0B4D0028F592 /* Fetch RecipesTests */,
+			);
+			name = "Fetch RecipesTests";
+			packageProductDependencies = (
+			);
+			productName = "Fetch RecipesTests";
+			productReference = EBEA05CE2DEA0B4D0028F592 /* Fetch RecipesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBEA05D72DEA0B4D0028F592 /* Fetch RecipesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEA05E82DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch RecipesUITests" */;
+			buildPhases = (
+				EBEA05D42DEA0B4D0028F592 /* Sources */,
+				EBEA05D52DEA0B4D0028F592 /* Frameworks */,
+				EBEA05D62DEA0B4D0028F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBEA05DA2DEA0B4D0028F592 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EBEA05DB2DEA0B4D0028F592 /* Fetch RecipesUITests */,
+			);
+			name = "Fetch RecipesUITests";
+			packageProductDependencies = (
+			);
+			productName = "Fetch RecipesUITests";
+			productReference = EBEA05D82DEA0B4D0028F592 /* Fetch RecipesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBEA05B92DEA0B4C0028F592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					EBEA05C02DEA0B4C0028F592 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					EBEA05CD2DEA0B4D0028F592 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EBEA05C02DEA0B4C0028F592;
+					};
+					EBEA05D72DEA0B4D0028F592 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EBEA05C02DEA0B4C0028F592;
+					};
+				};
+			};
+			buildConfigurationList = EBEA05BC2DEA0B4C0028F592 /* Build configuration list for PBXProject "Fetch Recipes" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBEA05B82DEA0B4C0028F592;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EBEA05C22DEA0B4C0028F592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBEA05C02DEA0B4C0028F592 /* Fetch Recipes */,
+				EBEA05CD2DEA0B4D0028F592 /* Fetch RecipesTests */,
+				EBEA05D72DEA0B4D0028F592 /* Fetch RecipesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBEA05BF2DEA0B4C0028F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05CC2DEA0B4D0028F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05D62DEA0B4D0028F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBEA05BD2DEA0B4C0028F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05CA2DEA0B4D0028F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA05D42DEA0B4D0028F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBEA05D02DEA0B4D0028F592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBEA05C02DEA0B4C0028F592 /* Fetch Recipes */;
+			targetProxy = EBEA05CF2DEA0B4D0028F592 /* PBXContainerItemProxy */;
+		};
+		EBEA05DA2DEA0B4D0028F592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBEA05C02DEA0B4C0028F592 /* Fetch Recipes */;
+			targetProxy = EBEA05D92DEA0B4D0028F592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EBEA05E02DEA0B4D0028F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBEA05E12DEA0B4D0028F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBEA05E32DEA0B4D0028F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBEA05E42DEA0B4D0028F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBEA05E62DEA0B4D0028F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-RecipesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Recipes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Recipes";
+			};
+			name = Debug;
+		};
+		EBEA05E72DEA0B4D0028F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-RecipesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Recipes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Recipes";
+			};
+			name = Release;
+		};
+		EBEA05E92DEA0B4D0028F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-RecipesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fetch Recipes";
+			};
+			name = Debug;
+		};
+		EBEA05EA2DEA0B4D0028F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pranay.Fetch-RecipesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fetch Recipes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBEA05BC2DEA0B4C0028F592 /* Build configuration list for PBXProject "Fetch Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEA05E02DEA0B4D0028F592 /* Debug */,
+				EBEA05E12DEA0B4D0028F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEA05E22DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEA05E32DEA0B4D0028F592 /* Debug */,
+				EBEA05E42DEA0B4D0028F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEA05E52DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch RecipesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEA05E62DEA0B4D0028F592 /* Debug */,
+				EBEA05E72DEA0B4D0028F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEA05E82DEA0B4D0028F592 /* Build configuration list for PBXNativeTarget "Fetch RecipesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEA05E92DEA0B4D0028F592 /* Debug */,
+				EBEA05EA2DEA0B4D0028F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBEA05B92DEA0B4C0028F592 /* Project object */;
+}
