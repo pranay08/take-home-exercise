@@ -28,6 +28,7 @@ struct RecipeCardView: View {
                             Image(systemName: viewModel.shareIconSystemImageName)
                                 .font(.subheadline)
                         }
+                        .buttonStyle(.borderless)
                     }
                     if let url = viewModel.youtubeLink {
                         Button {
@@ -36,6 +37,7 @@ struct RecipeCardView: View {
                             Image(systemName: viewModel.videoIconSystemImageName)
                                 .font(.subheadline)
                         }
+                        .buttonStyle(.borderless)
                     }
                 }
                 .padding(.top, 8)
