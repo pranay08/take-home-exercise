@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBEA07002DEA929C0028F592 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBEA06FF2DEA92990028F592 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EBEA05CF2DEA0B4D0028F592 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		EBEA05C12DEA0B4C0028F592 /* Fetch Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEA05CE2DEA0B4D0028F592 /* Fetch RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch RecipesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEA05D82DEA0B4D0028F592 /* Fetch RecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch RecipesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEA06FF2DEA92990028F592 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		EBEA05B82DEA0B4C0028F592 = {
 			isa = PBXGroup;
 			children = (
+				EBEA06FF2DEA92990028F592 /* README.md */,
 				EBEA05C32DEA0B4C0028F592 /* Fetch Recipes */,
 				EBEA05D12DEA0B4D0028F592 /* Fetch RecipesTests */,
 				EBEA05DB2DEA0B4D0028F592 /* Fetch RecipesUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEA07002DEA929C0028F592 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
