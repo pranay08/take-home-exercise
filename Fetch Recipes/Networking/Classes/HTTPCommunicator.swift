@@ -9,13 +9,13 @@ import Foundation
 
 final class HTTPCommunicator {
     private let server: Server
-    private let urlSession: URLSession
+    private let requester: URLRequestable
     
     // MARK: - Object Lifecycle
     
-    init(server: Server = .dev, urlSession: URLSession = .shared) {
+    init(server: Server = .dev, requester: URLRequestable = URLSession.shared) {
         self.server = server
-        self.urlSession = urlSession
+        self.requester = requester
     }
     
     // MARK: - Private
@@ -62,7 +62,7 @@ extension HTTPCommunicator: HTTPCommunicable {
         decoder: JSONDecoder
     ) async throws -> ResponseType where ResponseType : Decodable {
         let urlRequest = try buildURLRequest(from: request)
-        let (data, response) = try await urlSession.data(for: urlRequest)
+        let (data, response) = try await requester.data(for: urlRequest)
         guard let httpURLResponse = response as? HTTPURLResponse else {
             throw NetworkingError.badResponse
         }

@@ -12,22 +12,25 @@ extension AsyncImageView {
         @Published private(set) var state: ViewState = .none
         
         private let url: URL?
-        private let session: URLSession
-        private let cache: URLCache
+        private let requester: URLRequestable
+        private let cache: RequestCacheable
         
         init(
             url: URL?,
-            session: URLSession = .shared,
-            cache: URLCache = .shared
+            requester: URLRequestable = URLSession.shared,
+            cache: RequestCacheable = URLCache.shared
         ) {
             self.url = url
-            self.session = session
+            self.requester = requester
             self.cache = cache
         }
         
         @MainActor
         func loadImage() async {
-            guard state != .loading, let url else {
+            guard state != .loading else { return }
+            
+            guard let url else {
+                state = .error
                 return
             }
             
@@ -45,7 +48,7 @@ extension AsyncImageView {
         @MainActor
         private func downloadImage(from request: URLRequest) async {
             do {
-                let (data, response) = try await session.data(for: request)
+                let (data, response) = try await requester.data(for: request)
                 guard let image = UIImage(data: data) else {
                     state = .error
                     return
