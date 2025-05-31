@@ -11,7 +11,7 @@ extension RecipeCardView {
     final class ViewModel {
         var name: String { recipe.name }
         var cuisine: String { "Cuisine: \(recipe.cuisine)"}
-        var photoURL: URL { recipe.photoURLLarge }
+        var photoURL: URL? { recipe.photoURLLarge }
         var shareLink: URL? { recipe.sourceURL }
         var youtubeLink: URL? { recipe.youtubeURL }
         var placeholderSystemImageName: String { "photo" }

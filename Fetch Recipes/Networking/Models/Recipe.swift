@@ -11,8 +11,8 @@ struct Recipe: Decodable {
     let id: UUID
     let cuisine: String
     let name: String
-    let photoURLSmall: URL
-    let photoURLLarge: URL
+    let photoURLSmall: URL?
+    let photoURLLarge: URL?
     let sourceURL: URL?
     let youtubeURL: URL?
     
