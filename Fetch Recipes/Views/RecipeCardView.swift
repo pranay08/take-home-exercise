@@ -45,7 +45,10 @@ struct RecipeCardView: View {
             .padding(8)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
-            AsyncImageView(url: viewModel.photoURL) { image in
+            AsyncImageView(
+                url: viewModel.photoURL,
+                cacheKey: viewModel.imageCacheKey
+            ) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)

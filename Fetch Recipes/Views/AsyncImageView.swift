@@ -16,6 +16,7 @@ struct AsyncImageView<ContentImage, Placeholder, Error>: View where ContentImage
     
     init(
         url: URL?,
+        cacheKey: String? = nil,
         @ViewBuilder content: @escaping (Image) -> ContentImage = { $0 },
         @ViewBuilder placeholderView: @escaping () -> Placeholder? = { Rectangle() },
         @ViewBuilder errorView: @escaping () -> Error? = { EmptyView() }
@@ -23,7 +24,7 @@ struct AsyncImageView<ContentImage, Placeholder, Error>: View where ContentImage
         self.imageView = content
         self.placeholderView = placeholderView
         self.errorView = errorView
-        self.viewModel = .init(url: url)
+        self.viewModel = .init(url: url, cacheKey: cacheKey)
     }
     
     var body: some View {

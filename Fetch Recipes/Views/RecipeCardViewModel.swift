@@ -18,6 +18,7 @@ extension RecipeCardView {
         var errorSystemImageName: String { "photo.badge.exclamationmark" }
         var shareIconSystemImageName: String { "square.and.arrow.up" }
         var videoIconSystemImageName: String { "video" }
+        var imageCacheKey: String { recipe.id.uuidString }
         
         private let recipe: Recipe
         

@@ -21,9 +21,13 @@ Then I spent one hour improving the UI/UX. I scoured the web for some image icon
 
 Finally I spent 1.5 hours for writing unit tests. Plus an additional 15-20 minutes in writing this readme file.
 
+**Update:** I re-implemented the image caching mechanism to use disk caching with time-to-live logic. This took an additional hour and a half.
+
 ### Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
 
 One of the trade-offs I made is not being able to include logging or crash reporting tools in the app. This is something I would definitely include in a production ready app, apart from analytics.
+
+Another trade-off I made was to use `FileManager.default` directly in the `ImageCache` actor because `FileManager` doesn't conform to `Sendable` and I can't inject a `Sendable` protocol variable to the `ImageCache` actor without generating an Xcode warning. So I used the `FileManager.default` instance directly. Because of this trade-off, I was not able to inject a mock `FileManager` object to the `ImageCache` actor for writing unit tests.
 
 ### Weakest Part of the Project: What do you think is the weakest part of your project?
 
@@ -33,4 +37,4 @@ Apart from that, the error handling is minimal. I am only checking for a status 
 
 ### Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered.
 
-Nothing that I can think of.
+Initially I read the requirements wrong and implemented a cache mechanism that uses URLCache. I just realized that the requirement states not to use this type of caching. So I implemented disk caching and updated my project along with the unit tests.

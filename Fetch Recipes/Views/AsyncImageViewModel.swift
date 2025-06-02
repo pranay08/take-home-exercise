@@ -13,16 +13,27 @@ extension AsyncImageView {
         
         private let url: URL?
         private let requester: URLRequestable
-        private let cache: RequestCacheable
+        private let cache: ImageCacheable?
+        private let cacheKey: String?
+        private let cacheTimeToLive: TimeInterval
         
         init(
             url: URL?,
             requester: URLRequestable = URLSession.shared,
-            cache: RequestCacheable = URLCache.shared
+            cacheType: ImageCacheable.Type = ImageCache.self,
+            cacheKey: String? = nil,
+            cacheTimeToLive: TimeInterval = 60 * 60 * 24
         ) {
             self.url = url
             self.requester = requester
-            self.cache = cache
+            do {
+                self.cache = try cacheType.init()
+            } catch {
+                assertionFailure("Unable to load image cache")
+                self.cache = nil
+            }
+            self.cacheKey = cacheKey
+            self.cacheTimeToLive = cacheTimeToLive
         }
         
         @MainActor
@@ -36,11 +47,11 @@ extension AsyncImageView {
             
             state = .loading
             
-            let request = URLRequest(url: url)
-            if let response = cache.cachedResponse(for: request),
-                  let image = UIImage(data: response.data) {
+            if let cacheKey,
+               let image = try? await cache?.fetchImage(for: cacheKey) {
                 state = .loaded(.init(uiImage: image))
             } else {
+                let request = URLRequest(url: url)
                 await downloadImage(from: request)
             }
         }
@@ -48,14 +59,20 @@ extension AsyncImageView {
         @MainActor
         private func downloadImage(from request: URLRequest) async {
             do {
-                let (data, response) = try await requester.data(for: request)
+                let (data, _) = try await requester.data(for: request)
                 guard let image = UIImage(data: data) else {
                     state = .error
                     return
                 }
-                let cachedData = CachedURLResponse(response: response, data: data)
-                cache.storeCachedResponse(cachedData, for: request)
                 state = .loaded(.init(uiImage: image))
+                if let cacheKey {
+                    let config = ImageCacheConfig(key: cacheKey, timeToLive: cacheTimeToLive)
+                    do {
+                        try await cache?.save(image: image, config: config)
+                    } catch {
+                        print("cache save error")
+                    }
+                }
             } catch {
                 state = .error
             }

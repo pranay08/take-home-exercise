@@ -15,9 +15,10 @@ struct AsyncImageViewModelTests {
     @Test("Test load image with no URL")
     func testLoadImageWithNoURL() async throws {
         let mockRequester = MockURLRequester()
-        let mockCache = MockRequestCache()
+        let mockCacheType = MockImageCache.self
+        mockCacheType.resetMockData()
         let SutType = AsyncImageView<Image, EmptyView, EmptyView>.self
-        let sut = SutType.ViewModel(url: nil, requester: mockRequester, cache: mockCache)
+        let sut = SutType.ViewModel(url: nil, requester: mockRequester, cacheType: mockCacheType)
         var cancellables: Set<AnyCancellable> = .init()
         var viewStates = [SutType.ViewState.error]
         viewStates = []
@@ -31,12 +32,13 @@ struct AsyncImageViewModelTests {
     @Test("Test load image from cache with success")
     func testLoadImageURLFromCacheWithSuccess() async throws {
         let mockURL = URL(string: "https://www.google.com")
-        let mockImageData = UIImage(resource: .deadFood).pngData()!
+        let mockImage = UIImage(resource: .deadFood)
         let mockRequester = MockURLRequester()
-        let mockCache = MockRequestCache()
-        mockCache.mockCachedResponse = .init(response: .init(), data: mockImageData)
+        let mockCacheType = MockImageCache.self
+        mockCacheType.resetMockData()
+        mockCacheType.mockImage = mockImage
         let SutType = AsyncImageView<Image, EmptyView, EmptyView>.self
-        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cache: mockCache)
+        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cacheType: mockCacheType, cacheKey: "mock")
         var cancellables: Set<AnyCancellable> = .init()
         var viewStates = [SutType.ViewState.error]
         viewStates = []
@@ -54,8 +56,8 @@ struct AsyncImageViewModelTests {
             return true
         }() == true)
         assert(mockRequester.didRequestData == false)
-        assert(mockCache.didRequestCachedResponse == true)
-        assert(mockCache.storedCacheResponse == nil)
+        assert(mockCacheType.didFetchCachedImage == true)
+        assert(mockCacheType.didSaveImage == nil)
     }
     
     @Test("Test load image from URL requester and store in cache")
@@ -65,10 +67,10 @@ struct AsyncImageViewModelTests {
         let mockRequester = MockURLRequester()
         mockRequester.mockData = mockImageData
         mockRequester.mockResponse = .init()
-        let mockCache = MockRequestCache()
-        mockCache.mockCachedResponse = nil
+        let mockCacheType = MockImageCache.self
+        mockCacheType.resetMockData()
         let SutType = AsyncImageView<Image, EmptyView, EmptyView>.self
-        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cache: mockCache)
+        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cacheType: mockCacheType, cacheKey: "mock")
         var cancellables: Set<AnyCancellable> = .init()
         var viewStates = [SutType.ViewState.error]
         viewStates = []
@@ -86,8 +88,8 @@ struct AsyncImageViewModelTests {
             return true
         }() == true)
         assert(mockRequester.didRequestData == true)
-        assert(mockCache.didRequestCachedResponse == true)
-        assert(mockCache.storedCacheResponse?.data == mockImageData)
+        assert(mockCacheType.didFetchCachedImage == true)
+        assert(mockCacheType.didSaveImage == true)
     }
     
     @Test("Test load image from URL requester with error")
@@ -95,10 +97,10 @@ struct AsyncImageViewModelTests {
         let mockURL = URL(string: "https://www.google.com")
         let mockRequester = MockURLRequester()
         mockRequester.mockError = MockError.generic
-        let mockCache = MockRequestCache()
-        mockCache.mockCachedResponse = nil
+        let mockCacheType = MockImageCache.self
+        mockCacheType.resetMockData()
         let SutType = AsyncImageView<Image, EmptyView, EmptyView>.self
-        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cache: mockCache)
+        let sut = SutType.ViewModel(url: mockURL, requester: mockRequester, cacheType: mockCacheType, cacheKey: "mock")
         var cancellables: Set<AnyCancellable> = .init()
         var viewStates = [SutType.ViewState.error]
         viewStates = []
@@ -108,7 +110,7 @@ struct AsyncImageViewModelTests {
         await sut.loadImage()
         assert(viewStates == [.none, .loading, .error])
         assert(mockRequester.didRequestData == true)
-        assert(mockCache.didRequestCachedResponse == true)
-        assert(mockCache.storedCacheResponse?.data == nil)
+        assert(mockCacheType.didFetchCachedImage == true)
+        assert(mockCacheType.didSaveImage == nil)
     }
 }
