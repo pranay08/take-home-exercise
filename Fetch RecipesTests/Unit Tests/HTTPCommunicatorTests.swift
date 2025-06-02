@@ -125,8 +125,8 @@ struct HTTPCommunicatorTests {
             assert(response[0].id.uuidString == "0C6CA6E7-E32A-4053-B824-1DBF749910D8")
             assert(response[0].name == "Apam Balik")
             assert(response[0].cuisine == "Malaysian")
-            assert(response[0].photoURLSmall.absoluteString == "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/small.jpg")
-            assert(response[0].photoURLLarge.absoluteString == "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/large.jpg")
+            assert(response[0].photoURLSmall?.absoluteString == "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/small.jpg")
+            assert(response[0].photoURLLarge?.absoluteString == "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/large.jpg")
             assert(response[0].sourceURL?.absoluteString == "https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ")
             assert(response[0].youtubeURL?.absoluteString == "https://www.youtube.com/watch?v=6R8ffRRJcrg")
         } catch {
